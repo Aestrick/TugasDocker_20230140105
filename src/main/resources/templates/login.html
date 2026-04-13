@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login - Nasrul</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+<div class="card shadow-lg p-4" style="width: 25rem; border-radius: 15px;">
+    <div class="text-center mb-4">
+        <h3 class="fw-bold text-primary">Login Page</h3>
+        <p class="text-muted">Tugas DPL - Nasrul Fikri</p>
+    </div>
+
+    <div th:if="${error}" class="alert alert-danger" role="alert" th:text="${error}"></div>
+
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <label class="form-label fw-bold">Username</label>
+            <input type="text" name="username" class="form-control" placeholder="Masukkan admin" required>
+        </div>
+        <div class="mb-4">
+            <label class="form-label fw-bold">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Masukkan NIM kamu" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
